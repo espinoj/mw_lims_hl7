@@ -12,12 +12,12 @@ class Net_HL7_Types_XON
 
 
     public function __construct($paramArray)
-        {
-            $this->namespace_id = $paramArray[0];
-            $this->universal_id = $paramArray[1];
-            $this->universal_id_type = $paramArray[2];
+    {
+        $this->namespace_id = $paramArray[0];
+        $this->universal_id = $paramArray[1];
+        $this->universal_id_type = $paramArray[2];
 
-        }
+    }
 
 
     /**

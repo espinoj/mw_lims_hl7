@@ -21,16 +21,16 @@ class Net_HL7_Types_CWE
 
     function __construct($components)
     {
-        $this->identifier=$components[0];
-        $this->text=$components[1];
-        $this->nameOfCodingSystem=$components[2];
-        $this->alternateIdentifier=$components[3];
-        $this->alternateText=$components[4];
-        $this->nameOfAlternateCodingSystem=$components[5];
-        $this->codingSystemVersionId=$components[6];
-        $this->alternateCodingSystemVersionId=$components[7];
-        $this->originalText=$components[8];
-        
+        $this->identifier = $components[0];
+        $this->text = $components[1];
+        $this->nameOfCodingSystem = $components[2];
+        $this->alternateIdentifier = $components[3];
+        $this->alternateText = $components[4];
+        $this->nameOfAlternateCodingSystem = $components[5];
+        $this->codingSystemVersionId = $components[6];
+        $this->alternateCodingSystemVersionId = $components[7];
+        $this->originalText = $components[8];
+
     }
 
     /**
@@ -178,8 +178,4 @@ class Net_HL7_Types_CWE
     }
 
 
-    
-    
-
-
-} 
+}

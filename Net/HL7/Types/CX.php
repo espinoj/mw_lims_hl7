@@ -33,14 +33,16 @@ class Net_HL7_Types_CX
     /**
      * @return Net_HL7_Types_CX
      */
-    public static function template() {
+    public static function template()
+    {
         return new Net_HL7_Types_CX(array());
     }
 
     /**
      * @return array
      */
-    public function toArray() {
+    public function toArray()
+    {
         $components = array();
         $components[0] = $this->idNumber;
         $components[1] = $this->checkDigit;
@@ -167,5 +169,4 @@ class Net_HL7_Types_CX
     }
 
 
-
-} 
+}
