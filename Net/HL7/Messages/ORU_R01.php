@@ -16,7 +16,7 @@ class Net_HL7_Messages_ORU_R01
      * @return Net_HL7_Message
      *
      */
-    public static function generate()
+    public static function template()
     {
         return new Net_HL7_Message("MSH||||||||ORU^R01^ORU_R01|\rPID||\rPV1||\rORC||\rOBR||\rTQ1||\rOBX||\\rSPM||\r");
 
