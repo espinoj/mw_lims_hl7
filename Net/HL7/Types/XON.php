@@ -1,86 +1,83 @@
 <?php
 
-/**
- * Class Net_HL7_Types_XON
- *
-
- */
 class Net_HL7_Types_XON
 {
+     private $namespaceId;
+     private $universalId;
+     private $universalIdType;
 
-    private $namespace_id, $universal_id, $universal_id_type;
+     public function __construct($components)
+     {
+         $this->namespaceId = (empty($components[0])) ? "" : $components[0];
+         $this->universalId = (empty($components[1])) ? "" : $components[1];
+         $this->universalIdType = (empty($components[2])) ? "" : $components[2];
+     }
 
+    /**                     
+     * @return Net_HL7_Types_XON   
+     */                     
+     public static function template() {           
+         return new XON(array());     
+     }                                             
 
-    public function __construct($paramArray)
-    {
-        $this->namespace_id = $paramArray[0];
-        $this->universal_id = $paramArray[1];
-        $this->universal_id_type = $paramArray[2];
+    /**                                           
+     * @return array                              
+     */                                           
+    public function toArray() {                   
+        $components = array();                    
+        $components[0] = $this->namespaceId;                
+        $components[1] = $this->universalId;                
+        $components[2] = $this->universalIdType;                
+        return $components;                        
+    }                                               
 
-    }
+    /**                                                            
+     * @param $namespaceId string                            
+     */                                                            
+    public function setNamespaceId($namespaceId)     
+    {                                                              
+        $this->namespaceId = $namespaceId;           
+    }                                                              
 
+    /**                                                            
+     * @return string                                              
+     */                                                            
+    public function getNamespaceId()                        
+    {                                                              
+        return $this->namespaceId;                          
+    }                                                              
 
-    /**
-     * @return array
-     **/
-    function toArray()
-    {
-        return array(
-            $this->namespace_id,
-            $this->universal_id,
-            $this->universal_id_type
-        );
-    }
+    /**                                                            
+     * @param $universalId string                            
+     */                                                            
+    public function setUniversalId($universalId)     
+    {                                                              
+        $this->universalId = $universalId;           
+    }                                                              
 
-    /**
-     * @param mixed $namespace_id
-     */
-    public function setNamespaceId($namespace_id)
-    {
-        $this->namespace_id = $namespace_id;
-    }
+    /**                                                            
+     * @return string                                              
+     */                                                            
+    public function getUniversalId()                        
+    {                                                              
+        return $this->universalId;                          
+    }                                                              
 
-    /**
-     * @return mixed
-     */
-    public function getNamespaceId()
-    {
-        return $this->namespace_id;
-    }
+    /**                                                            
+     * @param $universalIdType string                            
+     */                                                            
+    public function setUniversalIdType($universalIdType)     
+    {                                                              
+        $this->universalIdType = $universalIdType;           
+    }                                                              
 
-    /**
-     * @param mixed $universal_id
-     */
-    public function setUniversalId($universal_id)
-    {
-        $this->universal_id = $universal_id;
-    }
+    /**                                                            
+     * @return string                                              
+     */                                                            
+    public function getUniversalIdType()                        
+    {                                                              
+        return $this->universalIdType;                          
+    }                                                              
 
-    /**
-     * @return mixed
-     */
-    public function getUniversalId()
-    {
-        return $this->universal_id;
-    }
-
-    /**
-     * @param mixed $universal_id_type
-     */
-    public function setUniversalIdType($universal_id_type)
-    {
-        $this->universal_id_type = $universal_id_type;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getUniversalIdType()
-    {
-        return $this->universal_id_type;
-    }
-
-
-}
-
+}                                                                  
 ?>

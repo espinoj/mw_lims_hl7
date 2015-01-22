@@ -1,49 +1,64 @@
 <?php
 
-
 class Net_HL7_Types_CQ
 {
+     private $quantity;
+     private $units;
 
-    private $quantity;
-    private $units;
+     public function __construct($components)
+     {
+         $this->quantity = (empty($components[0])) ? "" : $components[0];
+         $this->units = (empty($components[1])) ? "" : $components[1];
+     }
 
-    function __construct($params)
-    {
-        $this->quantity = $params[0];
-        $this->units = $params[1];
-    }
+    /**                     
+     * @return Net_HL7_Types_CQ   
+     */                     
+     public static function template() {           
+         return new CQ(array());     
+     }                                             
 
-    /**
-     * @param mixed $quantity
-     */
-    public function setQuantity($quantity)
-    {
-        $this->quantity = $quantity;
-    }
+    /**                                           
+     * @return array                              
+     */                                           
+    public function toArray() {                   
+        $components = array();                    
+        $components[0] = $this->quantity;                
+        $components[1] = $this->units;                
+        return $components;                        
+    }                                               
 
-    /**
-     * @return mixed
-     */
-    public function getQuantity()
-    {
-        return $this->quantity;
-    }
+    /**                                                            
+     * @param $quantity string                            
+     */                                                            
+    public function setQuantity($quantity)     
+    {                                                              
+        $this->quantity = $quantity;           
+    }                                                              
 
-    /**
-     * @param mixed $units
-     */
-    public function setUnits($units)
-    {
-        $this->units = $units;
-    }
+    /**                                                            
+     * @return string                                              
+     */                                                            
+    public function getQuantity()                        
+    {                                                              
+        return $this->quantity;                          
+    }                                                              
 
-    /**
-     * @return mixed
-     */
-    public function getUnits()
-    {
-        return $this->units;
-    }
+    /**                                                            
+     * @param $units string                            
+     */                                                            
+    public function setUnits($units)     
+    {                                                              
+        $this->units = $units;           
+    }                                                              
 
+    /**                                                            
+     * @return string                                              
+     */                                                            
+    public function getUnits()                        
+    {                                                              
+        return $this->units;                          
+    }                                                              
 
-}
+}                                                                  
+?>

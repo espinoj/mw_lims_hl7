@@ -1,11 +1,8 @@
 #!/opt/local/bin/perl
 
-#$classname = "CX";
+
 $classname = $ARGV[0];
 @var = split(",",$ARGV[1]);
-#$var[0]="variable1";
-#$var[1]="variable2";
-#$var[2]="variable3";
 
 
 print "<?php\n\n";

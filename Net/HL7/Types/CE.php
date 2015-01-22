@@ -1,131 +1,140 @@
 <?php
 
-/**
- * Class Net_HL7_Types_CE
- *
-
- */
 class Net_HL7_Types_CE
 {
+     private $identifier;
+     private $text;
+     private $nameOfCodingSystem;
+     private $alternateIdentifier;
+     private $alternateTest;
+     private $nameOfAlternateCodingSystem;
 
+     public function __construct($components)
+     {
+         $this->identifier = (empty($components[0])) ? "" : $components[0];
+         $this->text = (empty($components[1])) ? "" : $components[1];
+         $this->nameOfCodingSystem = (empty($components[2])) ? "" : $components[2];
+         $this->alternateIdentifier = (empty($components[3])) ? "" : $components[3];
+         $this->alternateTest = (empty($components[4])) ? "" : $components[4];
+         $this->nameOfAlternateCodingSystem = (empty($components[5])) ? "" : $components[5];
+     }
 
-    private $identifier;
-    private $text;
-    private $nameOfCodingSystem;
-    private $alternateIdentifier;
-    private $alternateTest;
-    private $nameOfAlternateCodingSystem;
+    /**                     
+     * @return Net_HL7_Types_CE   
+     */                     
+     public static function template() {           
+         return new CE(array());     
+     }                                             
 
-    public function __construct($paramArray)
-    {
+    /**                                           
+     * @return array                              
+     */                                           
+    public function toArray() {                   
+        $components = array();                    
+        $components[0] = $this->identifier;                
+        $components[1] = $this->text;                
+        $components[2] = $this->nameOfCodingSystem;                
+        $components[3] = $this->alternateIdentifier;                
+        $components[4] = $this->alternateTest;                
+        $components[5] = $this->nameOfAlternateCodingSystem;                
+        return $components;                        
+    }                                               
 
-        $this->identifier = $paramArray[0];
-        $this->text = $paramArray[1];
-        $this->nameOfCodingSystem = $paramArray[2];
-        $this->alternateIdentifier = $paramArray[3];
-        $this->alternateTest = $paramArray[4];
-        $this->nameOfAlternateCodingSystem = $paramArray[5];
+    /**                                                            
+     * @param $identifier string                            
+     */                                                            
+    public function setIdentifier($identifier)     
+    {                                                              
+        $this->identifier = $identifier;           
+    }                                                              
 
-    }
+    /**                                                            
+     * @return string                                              
+     */                                                            
+    public function getIdentifier()                        
+    {                                                              
+        return $this->identifier;                          
+    }                                                              
 
-    /**
-     * @param mixed $alternateIdentifier
-     */
-    public function setAlternateIdentifier($alternateIdentifier)
-    {
-        $this->alternateIdentifier = $alternateIdentifier;
-    }
+    /**                                                            
+     * @param $text string                            
+     */                                                            
+    public function setText($text)     
+    {                                                              
+        $this->text = $text;           
+    }                                                              
 
-    /**
-     * @return mixed
-     */
-    public function getAlternateIdentifier()
-    {
-        return $this->alternateIdentifier;
-    }
+    /**                                                            
+     * @return string                                              
+     */                                                            
+    public function getText()                        
+    {                                                              
+        return $this->text;                          
+    }                                                              
 
-    /**
-     * @param mixed $alternateTest
-     */
-    public function setAlternateTest($alternateTest)
-    {
-        $this->alternateTest = $alternateTest;
-    }
+    /**                                                            
+     * @param $nameOfCodingSystem string                            
+     */                                                            
+    public function setNameOfCodingSystem($nameOfCodingSystem)     
+    {                                                              
+        $this->nameOfCodingSystem = $nameOfCodingSystem;           
+    }                                                              
 
-    /**
-     * @return mixed
-     */
-    public function getAlternateTest()
-    {
-        return $this->alternateTest;
-    }
+    /**                                                            
+     * @return string                                              
+     */                                                            
+    public function getNameOfCodingSystem()                        
+    {                                                              
+        return $this->nameOfCodingSystem;                          
+    }                                                              
 
-    /**
-     * @param mixed $identifier
-     */
-    public function setIdentifier($identifier)
-    {
-        $this->identifier = $identifier;
-    }
+    /**                                                            
+     * @param $alternateIdentifier string                            
+     */                                                            
+    public function setAlternateIdentifier($alternateIdentifier)     
+    {                                                              
+        $this->alternateIdentifier = $alternateIdentifier;           
+    }                                                              
 
-    /**
-     * @return mixed
-     */
-    public function getIdentifier()
-    {
-        return $this->identifier;
-    }
+    /**                                                            
+     * @return string                                              
+     */                                                            
+    public function getAlternateIdentifier()                        
+    {                                                              
+        return $this->alternateIdentifier;                          
+    }                                                              
 
-    /**
-     * @param mixed $nameOfAlternateCodingSystem
-     */
-    public function setNameOfAlternateCodingSystem($nameOfAlternateCodingSystem)
-    {
-        $this->nameOfAlternateCodingSystem = $nameOfAlternateCodingSystem;
-    }
+    /**                                                            
+     * @param $alternateTest string                            
+     */                                                            
+    public function setAlternateTest($alternateTest)     
+    {                                                              
+        $this->alternateTest = $alternateTest;           
+    }                                                              
 
-    /**
-     * @return mixed
-     */
-    public function getNameOfAlternateCodingSystem()
-    {
-        return $this->nameOfAlternateCodingSystem;
-    }
+    /**                                                            
+     * @return string                                              
+     */                                                            
+    public function getAlternateTest()                        
+    {                                                              
+        return $this->alternateTest;                          
+    }                                                              
 
-    /**
-     * @param mixed $nameOfCodingSystem
-     */
-    public function setNameOfCodingSystem($nameOfCodingSystem)
-    {
-        $this->nameOfCodingSystem = $nameOfCodingSystem;
-    }
+    /**                                                            
+     * @param $nameOfAlternateCodingSystem string                            
+     */                                                            
+    public function setNameOfAlternateCodingSystem($nameOfAlternateCodingSystem)     
+    {                                                              
+        $this->nameOfAlternateCodingSystem = $nameOfAlternateCodingSystem;           
+    }                                                              
 
-    /**
-     * @return mixed
-     */
-    public function getNameOfCodingSystem()
-    {
-        return $this->nameOfCodingSystem;
-    }
+    /**                                                            
+     * @return string                                              
+     */                                                            
+    public function getNameOfAlternateCodingSystem()                        
+    {                                                              
+        return $this->nameOfAlternateCodingSystem;                          
+    }                                                              
 
-    /**
-     * @param mixed $text
-     */
-    public function setText($text)
-    {
-        $this->text = $text;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getText()
-    {
-        return $this->text;
-    }
-
-
-}
-
-
+}                                                                  
 ?>
