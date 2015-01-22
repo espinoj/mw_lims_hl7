@@ -22,6 +22,9 @@ $sample_message = Net_HL7_Messages_ORU_R01::generate();
 $pidfield = Net_HL7_Types_CX::template();
 $pidfield->setIdNumber("1234");
 $sample_message->getSegmentByName("PID")->setField(3, $pidfield->toArray());
+
+
+
 echo (new Net_HL7_Types_CX($sample_message->getSegmentByName("PID")->getField(3)))->getIdNumber();
 echo "<br/>\n";
 
