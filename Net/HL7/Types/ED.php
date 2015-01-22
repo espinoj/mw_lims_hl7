@@ -21,7 +21,7 @@ class Net_HL7_Types_ED
      * @return Net_HL7_Types_ED   
      */                     
      public static function template() {           
-         return new ED(array());     
+         return new Net_HL7_Types_ED(array());     
      }                                             
 
     /**                                           

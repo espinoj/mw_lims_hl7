@@ -25,7 +25,7 @@ class Net_HL7_Types_CX
      * @return Net_HL7_Types_CX   
      */                     
      public static function template() {           
-         return new CX(array());     
+         return new Net_HL7_Types_CX(array());     
      }                                             
 
     /**                                           

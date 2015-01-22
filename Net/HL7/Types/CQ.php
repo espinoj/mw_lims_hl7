@@ -15,7 +15,7 @@ class Net_HL7_Types_CQ
      * @return Net_HL7_Types_CQ   
      */                     
      public static function template() {           
-         return new CQ(array());     
+         return new Net_HL7_Types_CQ(array());     
      }                                             
 
     /**                                           

@@ -29,7 +29,7 @@ class Net_HL7_Types_CWE
      * @return Net_HL7_Types_CWE   
      */                     
      public static function template() {           
-         return new CWE(array());     
+         return new Net_HL7_Types_CWE(array());     
      }                                             
 
     /**                                           

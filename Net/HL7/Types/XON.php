@@ -17,7 +17,7 @@ class Net_HL7_Types_XON
      * @return Net_HL7_Types_XON   
      */                     
      public static function template() {           
-         return new XON(array());     
+         return new Net_HL7_Types_XON(array());     
      }                                             
 
     /**                                           

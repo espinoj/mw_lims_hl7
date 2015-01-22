@@ -19,7 +19,7 @@ class Net_HL7_Types_EI
      * @return Net_HL7_Types_EI   
      */                     
      public static function template() {           
-         return new EI(array());     
+         return new Net_HL7_Types_EI(array());     
      }                                             
 
     /**                                           

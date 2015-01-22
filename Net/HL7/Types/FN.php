@@ -21,7 +21,7 @@ class Net_HL7_Types_FN
      * @return Net_HL7_Types_FN   
      */                     
      public static function template() {           
-         return new FN(array());     
+         return new Net_HL7_Types_FN(array());     
      }                                             
 
     /**                                           

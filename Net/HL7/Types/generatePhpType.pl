@@ -27,7 +27,7 @@ print "    /**                     \n";
 print "     * \@return Net_HL7_Types_$classname   \n";
 print "     */                     \n";
 print "     public static function template() {           \n";
-print "         return new $classname(array());     \n";
+print "         return new Net_HL7_Types_$classname(array());     \n";
 print "     }                                             \n\n";
 
 print "    /**                                           \n";

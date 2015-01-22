@@ -15,7 +15,7 @@ class Net_HL7_Types_EIP
      * @return Net_HL7_Types_EIP   
      */                     
      public static function template() {           
-         return new EIP(array());     
+         return new Net_HL7_Types_EIP(array());     
      }                                             
 
     /**                                           

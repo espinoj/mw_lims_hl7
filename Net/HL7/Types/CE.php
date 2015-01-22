@@ -23,7 +23,7 @@ class Net_HL7_Types_CE
      * @return Net_HL7_Types_CE   
      */                     
      public static function template() {           
-         return new CE(array());     
+         return new Net_HL7_Types_CE(array());     
      }                                             
 
     /**                                           
