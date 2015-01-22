@@ -12,8 +12,11 @@ require_once "Net/HL7/Types/TS.php";
 class Net_HL7_Messages_ORU_R01
 {
 
-
-    function __construct()
+    /**
+     * @return Net_HL7_Message
+     *
+     */
+    public static function generate()
     {
         return new Net_HL7_Message("MSH||||||||ORU^R01^ORU_R01|\rPID||\rPV1||\rORC||\rOBR||\rTQ1||\rOBX||\\rSPM||\r");
 

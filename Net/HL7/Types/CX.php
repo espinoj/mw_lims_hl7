@@ -7,24 +7,51 @@
 class Net_HL7_Types_CX
 {
 
-    var $idNumber;
-    var $checkDigit;
-    var $checkDigitScheme;
-    var $assigningAuthority;
-    var $identifierTypeCode;
-    var $assigningFacility;
-    var $effectiveDate;
+    private $idNumber;
+    private $checkDigit;
+    private $checkDigitScheme;
+    private $assigningAuthority;
+    private $identifierTypeCode;
+    private $assigningFacility;
+    private $effectiveDate;
 
-    function __construct($components)
+    /**
+     * @param $components array
+     */
+    public function __construct($components)
     {
 
-        $this->idNumber = $components[0];
-        $this->checkDigit = $components[1];
-        $this->checkDigitScheme = $components[2];
-        $this->assigningAuthority = $components[3];
-        $this->identifierTypeCode = $components[4];
-        $this->assigningFacility = $components[5];
-        $this->effectiveDate = $components[6];
+        $this->idNumber = (empty($components[0])) ? "" : $components[0];
+        $this->checkDigit = (empty($components[1])) ? "" : $components[1];
+        $this->checkDigitScheme = (empty($components[2])) ? "" : $components[2];
+        $this->assigningAuthority = (empty($components[3])) ? "" : $components[3];
+        $this->identifierTypeCode = (empty($components[4])) ? "" : $components[4];
+        $this->assigningFacility = (empty($components[5])) ? "" : $components[5];
+        $this->effectiveDate = (empty($components[6])) ? "" : $components[6];
+    }
+
+    /**
+     * @return Net_HL7_Types_CX
+     */
+    public static function template() {
+        return new Net_HL7_Types_CX(array());
+    }
+
+    /**
+     * @return array
+     */
+    public function toArray() {
+        $components = array();
+        $components[0] = $this->idNumber;
+        $components[1] = $this->checkDigit;
+        $components[2] = $this->checkDigitScheme;
+        $components[3] = $this->assigningAuthority;
+        $components[4] = $this->identifierTypeCode;
+        $components[5] = $this->assigningFacility;
+        $components[6] = $this->effectiveDate;
+
+        return $components;
+
     }
 
     /**
@@ -138,6 +165,7 @@ class Net_HL7_Types_CX
     {
         return $this->identifierTypeCode;
     }
+
 
 
 } 
